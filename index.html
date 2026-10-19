@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savar Travellers Group — বাংলাদেশের সেরা বাজেট ট্যুর</title>
+<meta name="description" content="সাভার ট্রাভেলার্স গ্রুপ — পাহাড়, সমুদ্র আর সবুজের গভীরে হারিয়ে যান। বাজেট ফ্রেন্ডলি ডে-লং ও রিলাক্স ট্যুর, নারীদের জন্য নিরাপদ ভ্রমণ।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1BA5C4;--teal-d:#0F7A96;--dark:#0E2A33;--dark2:#0A2129;
+  --ink:#122630;--mut:#6b7b83;--line:#e3ebee;--tint:#F2F9FB;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Hind Siliguri',system-ui,'Segoe UI',sans-serif;color:var(--ink);line-height:1.7;background:#fff;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.script{font-family:'Great Vibes',cursive;font-size:clamp(28px,4vw,40px);color:var(--teal);display:block;margin-bottom:4px}
+h2.big{font-size:clamp(28px,3.4vw,44px);font-weight:700;line-height:1.25;letter-spacing:-.5px}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
+.sec-head p{color:var(--mut);margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15.5px;padding:13px 26px;border-radius:99px;border:none;cursor:pointer;font-family:inherit;transition:.25s}
+.btn-c{background:var(--teal);color:#fff;box-shadow:0 10px 24px -8px rgba(27,165,196,.55)}
+.btn-c:hover{background:var(--teal-d);transform:translateY(-2px)}
+.btn-o{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-o:hover{border-color:var(--teal);color:var(--teal)}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--dark);transition:.3s}
+.nav{max-width:1200px;margin:0 auto;padding:0 20px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;color:#fff}
+.logo-ic{width:44px;height:44px;border-radius:50%;background:var(--teal);display:grid;place-items:center;flex:none}
+.logo b{font-size:19px;line-height:1.15;display:block}
+.logo small{font-size:11px;color:#9fd8e6;letter-spacing:.08em;text-transform:uppercase}
+.menu{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:#d9e6ea}
+.menu a:hover{color:var(--teal)}
+.nav .btn{padding:10px 22px;font-size:14px}
+#burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+#burger span{display:block;width:24px;height:2.5px;background:#fff;margin:5px 0;border-radius:2px;transition:.3s}
+#mmenu{display:none;background:var(--dark2);padding:14px 20px 20px;flex-direction:column;gap:4px}
+#mmenu a{color:#d9e6ea;padding:10px 4px;font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
+#mmenu.open{display:flex}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 20px 170px;background:#0E2A33}
+.hero-bg{position:absolute;inset:0;background:url('https://www.savartravellers.com/public/storage/packages/thumbnails/bas-01-7i-oktobr-sajek-vzali-rilaks-tzur-matr-4700-takaz_thumbnail_1790481239.jpg') center/cover no-repeat}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,38,.55),rgba(10,30,38,.72))}
+.hero-in{position:relative;z-index:2;color:#fff;max-width:820px}
+.hero-in .script{color:#7fd4e8}
+.hero-in h1{font-size:clamp(32px,5.2vw,58px);font-weight:700;line-height:1.28;letter-spacing:-.5px;margin-bottom:18px}
+.hero-in p{font-size:clamp(15px,2vw,18px);color:#c9dde4;max-width:620px;margin:0 auto 30px}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-btns .btn{padding:15px 32px;font-size:16px}
+
+/* search card */
+.search{position:relative;z-index:5;margin:-92px auto 0;max-width:1080px;padding:0 20px}
+.search-card{background:#fff;border-radius:20px;box-shadow:0 24px 60px -18px rgba(9,38,48,.35);padding:22px;display:grid;grid-template-columns:1.3fr 1fr 1fr auto;gap:16px;align-items:end}
+.fld label{display:block;font-size:12.5px;font-weight:600;color:var(--mut);margin-bottom:6px}
+.fld .box{border:1px solid var(--line);border-radius:12px;padding:11px 14px;display:flex;align-items:center;gap:10px}
+.fld select,.fld input{border:none;outline:none;font-family:inherit;font-size:15px;width:100%;background:none;color:var(--ink)}
+.fld svg{flex:none;color:var(--teal)}
+
+/* about */
+.about{padding:86px 0 60px}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.about-grid p{color:var(--mut);margin-top:14px;font-size:16px}
+.feat{display:flex;gap:14px;margin-top:20px}
+.feat .ic{width:52px;height:52px;flex:none;border-radius:14px;background:var(--tint);color:var(--teal);display:grid;place-items:center}
+.feat b{display:block;font-size:16.5px}
+.feat span{font-size:13.5px;color:var(--mut)}
+.about-img{position:relative}
+.about-img img{border-radius:22px 22px 22px 80px;width:100%;height:420px;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:absolute;left:-46px;bottom:24px;background:#fff;border-radius:16px;box-shadow:0 18px 44px -14px rgba(9,38,48,.3);padding:18px 22px}
+.stats b{font-size:26px;color:var(--teal);font-weight:700;display:block;line-height:1}
+.stats span{font-size:12px;color:var(--mut)}
+.about-img .orb{position:absolute;top:-22px;right:-14px;width:56px;height:56px;background:var(--teal);border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 12px 26px -8px rgba(27,165,196,.6)}
+
+/* tours */
+.tours{background:var(--tint);padding:80px 0;position:relative;overflow:hidden}
+.tours::before{content:'✈';position:absolute;font-size:150px;opacity:.045;top:30px;left:-10px}
+.tours::after{content:'⛰';position:absolute;font-size:170px;opacity:.05;bottom:-20px;right:-8px}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;position:relative;z-index:1}
+.tcard{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px -16px rgba(9,38,48,.18);transition:.3s;display:flex;flex-direction:column}
+.tcard:hover{transform:translateY(-6px);box-shadow:0 24px 44px -16px rgba(9,38,48,.28)}
+.tthumb{position:relative;aspect-ratio:16/10;overflow:hidden}
+.tthumb img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.tcard:hover .tthumb img{transform:scale(1.06)}
+.tdate{position:absolute;top:14px;left:14px;background:var(--teal);color:#fff;font-size:12.5px;font-weight:600;padding:6px 13px;border-radius:99px;box-shadow:0 8px 18px -6px rgba(0,0,0,.4)}
+.tbody{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}
+.tbody h3{font-size:17.5px;font-weight:700;line-height:1.45;min-height:50px}
+.tloc{display:flex;align-items:center;gap:7px;color:var(--mut);font-size:14px;margin:6px 0 12px}
+.tloc svg{color:var(--teal)}
+.tfoot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:14px}
+.tprice{font-weight:700;color:var(--teal);font-size:17px}
+.tprice small{color:var(--mut);font-weight:500;font-size:12px;display:block}
+.tbook{background:var(--tint);color:var(--ink);font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:99px;transition:.25s;font-family:inherit;border:none;cursor:pointer}
+.tbook:hover{background:var(--teal);color:#fff}
+.nores{grid-column:1/-1;text-align:center;color:var(--mut);padding:30px 0}
+.all-btn{text-align:center;margin-top:38px}
+
+/* completed strip */
+.done{padding:80px 0}
+.done-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.dcard{border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.dcard img{width:100%;height:100%;object-fit:cover;transition:.45s}
+.dcard:hover img{transform:scale(1.07)}
+.dcard .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,26,33,.85),transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:14px;color:#fff}
+.dcard .ov b{font-size:13.5px;line-height:1.4}
+.dcard .ov span{font-size:11.5px;color:#8fd0e0}
+.dcard .tick{position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:50%;background:var(--teal);display:grid;place-items:center}
+
+/* destinations */
+.dest{background:var(--tint);padding:80px 0}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.dcard2{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/10;display:block}
+.dcard2 img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.dcard2:hover img{transform:scale(1.06)}
+.dcard2 .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,26,33,.88),rgba(8,26,33,.15) 60%);display:flex;align-items:flex-end;justify-content:space-between;padding:18px;color:#fff}
+.dcard2 .ov b{font-size:18px}
+.dcard2 .ov small{display:block;font-size:12.5px;color:#8fd0e0}
+.dcard2 .cnt{background:rgba(255,255,255,.14);backdrop-filter:blur(4px);font-size:12.5px;font-weight:600;padding:6px 13px;border-radius:99px}
+
+/* reviews */
+.reviews{padding:80px 0}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
+.rcard{background:var(--tint);border-radius:18px;padding:26px;position:relative}
+.rcard .q{position:absolute;top:18px;right:22px;font-size:52px;color:var(--teal);opacity:.18;font-family:Georgia,serif;line-height:1}
+.rcard p{font-size:14.5px;color:var(--ink);margin:8px 0 16px}
+.rcard .stars{color:#f5a623;font-size:14px;letter-spacing:2px}
+.rwho b{font-size:15px;display:block}
+.rwho span{font-size:12.5px;color:var(--mut)}
+
+/* why */
+.why{padding:80px 0;background:var(--dark);color:#fff}
+.why .sec-head h2{color:#fff}
+.why .sec-head p{color:#a7c4cd}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.wcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:30px;transition:.3s}
+.wcard:hover{background:rgba(255,255,255,.09);transform:translateY(-5px)}
+.wcard .ic{width:54px;height:54px;border-radius:50%;background:var(--teal);display:grid;place-items:center;margin-bottom:16px}
+.wcard h3{font-size:19px;margin-bottom:8px}
+.wcard p{font-size:14px;color:#b9cfd7}
+
+/* footer */
+footer{background:var(--dark2);color:#b9cfd7;padding:64px 0 0}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px}
+footer h4{color:#fff;font-size:17px;margin-bottom:16px}
+footer .logo{margin-bottom:14px}
+.fgrid p{font-size:14.5px}
+.fgrid ul{list-style:none}
+.fgrid ul li{margin-bottom:10px}
+.fgrid ul a{font-size:14.5px}
+.fgrid ul a:hover{color:var(--teal)}
+.fcon{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:14.5px}
+.fcon .ic{width:36px;height:36px;flex:none;border-radius:10px;background:rgba(27,165,196,.14);color:var(--teal);display:grid;place-items:center}
+.copy{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13.5px}
+.copy a{color:var(--teal)}
+
+/* misc */
+#top{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:50%;background:var(--teal);color:#fff;border:none;cursor:pointer;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(27,165,196,.7);opacity:0;pointer-events:none;transition:.3s;z-index:70}
+#top.show{opacity:1;pointer-events:auto}
+.rv{opacity:0;transform:translateY(26px);transition:all .7s ease-out}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media(max-width:1024px){
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .about-img img{height:340px}
+  .stats{left:14px;bottom:-30px;right:14px}
+  .search-card{grid-template-columns:1fr 1fr;gap:12px}
+  .wgrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .menu,.nav .btn{display:none}
+  #burger{display:block}
+  .search-card{grid-template-columns:1fr}
+  .search{margin-top:-70px}
+  .hero{padding:120px 20px 150px}
+}
+@media(max-width:540px){.fgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#home" class="logo">
+      <span class="logo-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+      <span><b>সাভার ট্রাভেলার্স</b><small>Explore Bangladesh</small></span>
+    </a>
+    <nav class="menu">
+      <a href="#home">হোম</a>
+      <a href="#about">আমাদের সম্পর্কে</a>
+      <a href="#tours">ট্যুরসমূহ</a>
+      <a href="#dest">গন্তব্য</a>
+      <a href="#reviews">রিভিউ</a>
+      <a href="#contact">যোগাযোগ</a>
+    </nav>
+    <a class="btn btn-c" href="https://wa.me/8801403207020" target="_blank" rel="noopener">বুক করুন</a>
+    <button id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav id="mmenu">
+    <a href="#home">হোম</a><a href="#about">আমাদের সম্পর্কে</a><a href="#tours">ট্যুরসমূহ</a><a href="#dest">গন্তব্য</a><a href="#reviews">রিভিউ</a><a href="#contact">যোগাযোগ</a><a href="https://wa.me/8801403207020" target="_blank" rel="noopener">বুক করুন</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg" role="img" aria-label="সাজেক ভ্যালি"></div>
+  <div class="hero-in">
+    <span class="script">Savar Travellers</span>
+    <h1>পাহাড়, সমুদ্র আর সবুজের গভীরে<br>নিজেকে হারিয়ে যান</h1>
+    <p>শান্ত নদী, সবুজ চা-বাগান থেকে প্রাণবন্ত শহর — বাংলাদেশের প্রকৃত সৌন্দর্য উপভোগ করুন আমাদের সাথে। বাজেট ফ্রেন্ডলি, নিরাপদ আর আনন্দময় ভ্রমণ।</p>
+    <div class="hero-btns">
+      <a href="#tours" class="btn btn-c">ট্যুর দেখুন →</a>
+      <a href="https://wa.me/8801403207020" target="_blank" rel="noopener" class="btn btn-o">বুক করুন</a>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<div class="search">
+  <form class="search-card" id="searchForm">
+    <div class="fld">
+      <label>গন্তব্য</label>
+      <div class="box"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <select id="fDest"><option value="">সব গন্তব্য</option></select></div>
+    </div>
+    <div class="fld">
+      <label>তারিখ</label>
+      <div class="box"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+      <input type="date" id="fDate"></div>
+    </div>
+    <div class="fld">
+      <label>সর্বোচ্চ খরচ</label>
+      <div class="box"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 6H9.5a3 3 0 0 0 0 6h5a3 3 0 0 1 0 6H6"/></svg>
+      <select id="fCost"><option value="">যেকোনো বাজেট</option><option value="1500">৳১৫০০ পর্যন্ত</option><option value="2000">৳২০০০ পর্যন্ত</option><option value="5000">৳৫০০০ পর্যন্ত</option></select></div>
+    </div>
+    <button class="btn btn-c" type="submit">খুঁজুন</button>
+  </form>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="rv">
+      <span class="script">Who We Are</span>
+      <h2 class="big">সাভার ট্রাভেলার্স গ্রুপ —<br>আপনার ভ্রমণের বিশ্বস্ত সঙ্গী</h2>
+      <p>আমরা বিশ্বাস করি, প্রতিটি মানুষের প্রকৃতির মায়া উপভোগ করার অধিকার আছে। আমাদের অভিজ্ঞ টিম প্রতিটি ভ্রমণ সাজায় আপনার বাজেট আর আরামের কথা মাথায় রেখে — থ্রিলিং পাহাড়ি ট্রেক থেকে শান্ত সমুদ্র উপকূল, সব বয়সের ভ্রমণপ্রেমীর জন্য আমাদের আয়োজন।</p>
+      <p>নারী ও পরিবারের জন্য আমাদের ভ্রমণ সম্পূর্ণ নিরাপদ এবং কেয়ারিং।</p>
+      <div class="feat">
+        <div class="feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></div><div><b>এক্সক্লুসিভ ট্রিপ</b><span>প্রতি সপ্তাহে নতুন গন্তব্য</span></div></div>
+        <div class="feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><div><b>প্রফেশনাল গাইড</b><span>নির্ভরযোগ্য টিম সর্বদা সাথে</span></div></div>
+      </div>
+    </div>
+    <div class="about-img rv">
+      <img src="https://www.savartravellers.com/public/storage/guidelines/2OoO4JrAJmDagrMiP0RrxeXfITTnHAAvpcJTuLUz.jpg" alt="Savar Travellers টিম">
+      <div class="orb"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M17 7H8M17 7v9"/></svg></div>
+      <div class="stats">
+        <div><b>৫০০০+</b><span>মোট সদস্য</span></div>
+        <div><b>১৯০+</b><span>মোট ভ্রমণ</span></div>
+        <div><b>৫.০★</b><span>রেটিং</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING TOURS -->
+<section class="tours" id="tours">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="script">আসন্ন ট্যুর</span>
+      <h2 class="big">আপনার পছন্দের অভিযান বেছে নিন</h2>
+      <p>আমাদের আসন্ন সব প্যাকেজ — ডে-লং, রিলাক্স আর ইভেন্ট ট্যুর। সিট শেষ হওয়ার আগেই বুক করুন।</p>
+    </div>
+    <div class="tgrid" id="tourGrid"></div>
+    <div class="all-btn rv"><a class="btn btn-o" href="https://www.savartravellers.com/" target="_blank" rel="noopener">সকল প্যাকেজ দেখুন</a></div>
+  </div>
+</section>
+
+<!-- COMPLETED -->
+<section class="done" id="done">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="script">সম্পন্ন ট্যুর</span>
+      <h2 class="big">সফলভাবে সম্পন্ন হয়েছে</h2>
+      <p>আমাদের গাইডেড ভ্রমণগুলো সব সফলভাবে সম্পন্ন হয়েছে — সদস্যদের ভালোবাসাই আমাদের শক্তি।</p>
+    </div>
+    <div class="done-grid rv" id="doneGrid"></div>
+    <div class="all-btn rv"><a class="btn btn-o" href="https://www.savartravellers.com/" target="_blank" rel="noopener">সকল ট্যুর</a></div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="dest" id="dest">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="script">Top Spot</span>
+      <h2 class="big">আমাদের জনপ্রিয় গন্তব্যসমূহ</h2>
+      <p>স্থানীয় স্বাদ উপভোগ করুন, লোককথা শুনুন, আর ঐতিহ্যবাহী পথে হাঁটুন।</p>
+    </div>
+    <div class="dgrid rv" id="destGrid"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="script">Testimonial</span>
+      <h2 class="big">তারা আমাদের নিয়ে যা বলছে</h2>
+    </div>
+    <div class="rgrid rv" id="revGrid"></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="script">Why Choose Us</span>
+      <h2 class="big">কেন সাভার ট্রাভেলার্স গ্রুপ?</h2>
+    </div>
+    <div class="wgrid rv">
+      <div class="wcard"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div><h3>শীর্ষস্থানীয় নিরাপত্তা</h3><p>নারী ও কাপলদের জন্য সম্পূর্ণ নিরাপদ পরিবেশ, যথেষ্ট কেয়ারিং এবং সহায়ক টিম — আপনি নিশ্চিন্তে ভ্রমণ করতে পারবেন।</p></div>
+      <div class="wcard"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2v20M17 6H9.5a3 3 0 0 0 0 6h5a3 3 0 0 1 0 6H6"/></svg></div><h3>সেরা দামের নিশ্চয়তা</h3><p>সবচেয়ে কম দামে সর্বোচ্চ সুবিধা — পরিবহন, খাবার আর গাইড সব অন্তর্ভুক্ত, কোনো লুকানো খরচ নেই।</p></div>
+      <div class="wcard"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3 12 12"/><path d="M16 3h5v5"/></svg></div><h3>নির্ভরযোগ্য সহায়তা</h3><p>যেকোনো সময় আমাদের সার্ভিস টিম প্রস্তুত — বুকিং থেকে যাত্রা শেষ পর্যন্ত প্রতিটি ধাপে দ্রুত সমাধান।</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#home" class="logo"><span class="logo-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><span><b>সাভার ট্রাভেলার্স</b><small>Explore Bangladesh</small></span></a>
+        <p>আত্মবিশ্বাস নিয়ে বেরিয়ে পড়ুন বাংলাদেশের সেরা গন্তব্যগুলোতে — পাহাড়, সমুদ্র, হাওর আর চা-বাগানের রাজ্যে।</p>
+      </div>
+      <div>
+        <h4>জনপ্রিয় লিঙ্ক</h4>
+        <ul>
+          <li><a href="#tours">আমাদের ট্যুরসমূহ দেখুন</a></li>
+          <li><a href="#dest">নতুন গন্তব্যের সঙ্গে পরিচিত হন</a></li>
+          <li><a href="#reviews">গ্রাহকের অভিজ্ঞতা</a></li>
+          <li><a href="#about">আমাদের সম্পর্কে জানুন</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>যোগাযোগ</h4>
+        <div class="fcon"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6 10-6"/></svg></span>savartravellers@gmail.com</div>
+        <div class="fcon"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg></span>01403207020</div>
+        <div class="fcon"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Savar Office: 30/C Mojidpur Chowrasta, Savar Dhaka</div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>&copy; 2025 <a href="https://www.savartravellers.com/" target="_blank" rel="noopener">savartravellers.com</a> — সর্বস্বত্ব সংরক্ষিত</span>
+      <span>Developed by <a href="https://www.tarunsoft.com/" target="_blank" rel="noopener">Tarun Soft</a> · Redesign Preview</span>
+    </div>
+  </div>
+</footer>
+
+<button id="top" aria-label="Top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+var WA='https://wa.me/8801403207020?text='
+var tours=[
+ {date:'29 Oct 2026',iso:'2026-10-29',loc:'শ্রীমঙ্গল',price:1600,title:'২৯শে অক্টোবর শ্রীমঙ্গল ডে লং ট্যুর মাত্র ১৬০০ টাকা',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/15i-oktobr-sreemngol-de-lng-tzur-matr-1600-takay_thumbnail_1791032912.jpg'},
+ {date:'22 Oct 2026',iso:'2026-10-22',loc:'ভোলাগঞ্জ সাদা পাথর',price:1700,title:'(বাস ১) ২২শে অক্টোবর সাদাপাথর ডে ট্যুর মাত্র ১৭০০ টাকা',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/bas-1-8i-oktobr-sadapathr-de-tzur-matr-1700taka_thumbnail_1791031978.jpg'},
+ {date:'20 Oct 2026',iso:'2026-10-20',loc:'সীতাকুণ্ড',price:1400,title:'(বাস ০১) ২০ই অক্টোবর সীতাকুণ্ড ডে লং ট্যুর মাত্র ১৪০০ টাকা',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/bas-01-24se-septembr-seetakund-de-lng-tzur-matr-1300-takaz_thumbnail_1790138595.jpg'},
+ {date:'19 Oct 2026',iso:'2026-10-19',loc:'কক্সবাজার',price:3500,title:'(বাস ০২) ১৯ই অক্টোবর কক্সবাজার রিলাক্স ট্যুর মাত্র ৩৫০০ টাকা',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/24i-jun-kksbajar-rilaks-tzur-matr-3500-takaz_thumbnail_1786576747.jpg'},
+ {date:'19 Oct 2026',iso:'2026-10-19',loc:'কক্সবাজার',price:3500,title:'(বাস ০১) ১৯ই অক্টোবর কক্সবাজার রিলাক্স ট্যুর মাত্র ৩৫০০ টাকা',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/24i-jun-kksbajar-rilaks-tzur-matr-3500-takaz_thumbnail_1786576747.jpg'},
+ {date:'22 Oct 2026',iso:'2026-10-22',loc:'পঞ্চগড়',price:2000,title:'২২ই অক্টোবর পঞ্চগড় ডে লং ট্যুর মাত্র ২০০০ টাকায়',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/22i-oktobr-pncgr-de-lng-tzur-matr-1600-takay_thumbnail_1791185555.jpg'},
+ {date:'20 Oct 2026',iso:'2026-10-20',loc:'কুয়াকাটা',price:1600,title:'(বাস ১) ২০শে অক্টোবর কুয়াকাটা ডে লং ট্যুর মাত্র ১৬০০ টাকা',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/bas-1-8i-oktobr-kuyakata-de-lng-tzur-matr-1600-takay_thumbnail_1790688066.jpg'}
+];
+var done=[
+ {t:'সিলেট রিলাক্স ট্যুর',d:'20 Oct 2026',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/4i-agst-silet-rilzaks-tzur-matr-3500-taka_thumbnail_1784952556.jpg'},
+ {t:'শ্রীমঙ্গল ডে লং ট্যুর',d:'15 Oct 2026',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/15i-oktobr-sreemngol-de-lng-tzur-matr-1600-takay_thumbnail_1791032912.jpg'},
+ {t:'সাদাপাথর ডে ট্যুর',d:'08 Oct 2026',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/bas-1-8i-oktobr-sadapathr-de-tzur-matr-1700taka_thumbnail_1791031978.jpg'},
+ {t:'সীতাকুণ্ড ডে লং ট্যুর',d:'08 Oct 2026',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/bas-01-24se-septembr-seetakund-de-lng-tzur-matr-1300-takaz_thumbnail_1790138595.jpg'},
+ {t:'সাজেক ভ্যালি রিলাক্স ট্যুর',d:'07 Oct 2026',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/bas-01-7i-oktobr-sajek-vzali-rilaks-tzur-matr-4700-takaz_thumbnail_1790481239.jpg'},
+ {t:'সাদাপাথর ডে ট্যুর',d:'01 Oct 2026',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/bas-1-1i-oktobr-sadapathr-de-tzur-matr-1700taka_thumbnail_1790403713.jpg'},
+ {t:'সীতাকুণ্ড ডে লং ট্যুর',d:'17 Sep 2026',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/bas-01-17i-septembr-seetakund-de-lng-tzur-matr-1300-takaz_thumbnail_1789580523.jpg'},
+ {t:'সাদাপাথর ডে ট্যুর',d:'15 Oct 2026',img:'https://www.savartravellers.com/public/storage/packages/thumbnails/bas-1-15i-oktobr-sadapathr-de-tzur-matr-1600taka_thumbnail_1790660801.jpg'}
+];
+var dests=[
+ {n:'মাওয়া ফেরীঘাট মুন্সিগঞ্জ',c:'12 Tours',img:'https://www.savartravellers.com/public/storage/destinations/destination_1770304157.jpg'},
+ {n:'সিলেট',c:'6 Tours',img:'https://www.savartravellers.com/public/storage/destinations/destination_1771383208.jfif'},
+ {n:'নেত্রকোনা',c:'2 Tours',img:'https://www.savartravellers.com/public/storage/destinations/destination_1775148859.jpeg'},
+ {n:'খাগড়াছড়ি',c:'1 Tour',img:'https://www.savartravellers.com/public/storage/destinations/destination_1781600609.jpg'},
+ {n:'পঞ্চগড়',c:'1 Tour',img:'https://www.savartravellers.com/public/storage/destinations/destination_1791184552.jpeg'},
+ {n:'সেন্টমার্টিন',c:'1 Tour',img:'https://www.savartravellers.com/public/storage/destinations/a2iPC33uUEhUUOiZazFCqDasadX6Zn4tc04yTXhA.webp'}
+];
+var revs=[
+ {n:'Khurshida Nishu',r:'Traveller',t:'আমি অনেক গ্রুপের সাথে ট্যুর দিয়েছি, তাদের মধ্যে STG best। STG-র সাথে ট্যুর দেওয়ার পর আমি আর অন্য কোনো গ্রুপের সাথে ট্যুর দিইনি। আমি টাঙ্গাইল ডিস্ট্রিক্টের হয়েও STG-র সাথে ট্যুর দিই কারণ STG সেরা ❤️'},
+ {n:'Aysha Akter Sagorika',r:'Traveller',t:'আলহামদুলিল্লাহ, যথেষ্ট কেয়ারিং, সম্পূর্ণ নিরাপদ। আমিও ভয় পেয়েছিলাম কিন্তু যাওয়ার পর ভয়টা কেটে গেল। নীর ভয়ে মেয়েরা ট্যুর দিতে পারবে।'},
+ {n:'Jakir Hosen Hasib',r:'Traveller',t:'এই গ্রুপের সাথে আমি অনেক বার ট্যুরে গেছি। সাভার ট্রাভেলার্স গ্রুপের নারী গেস্টরা একটু বেশিই সুবিধা পায় এবং কাপলরা নিরাপদেই থাকে। নিরাপত্তার কথা মাথায় রেখে নিশ্চিন্ত মনে ট্যুরে যেতে পারেন।'},
+ {n:'siam islam',r:'Traveller',t:'৫ বার গিয়েছি এই গ্রুপের সাথে, আলহামদুল্লাহ খুবই ভালো সার্ভিস তাদের।'}
+];
+var B='https://www.savartravellers.com/public/storage/';
+// fill destination filter
+var fD=document.getElementById('fDest');
+dests.forEach(function(d){var o=document.createElement('option');o.textContent=d.n;fD.appendChild(o)});
+['শ্রীমঙ্গল','ভোলাগঞ্জ সাদা পাথর','কক্সবাজার','কুয়াকাটা'].forEach(function(x){if(![...fD.options].some(function(o){return o.text===x})){var o=document.createElement('option');o.textContent=x;fD.appendChild(o)}});
+function bn(n){return n.toString().replace(/\d/g,function(d){return '০১২৩৪৫৬৭৮৯'[d]})}
+function tourCard(p){return '<div class="tcard"><div class="tthumb"><img src="'+p.img+'" alt="'+p.loc+'" loading="lazy"><span class="tdate">'+p.date+'</span></div>'+
+ '<div class="tbody"><h3>'+p.title+'</h3><div class="tloc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>'+p.loc+'</div>'+
+ '<div class="tfoot"><div class="tprice">৳'+bn(p.price)+'<small>প্রতি জন</small></div><a class="tbook" href="'+WA+encodeURIComponent(p.title)+'" target="_blank" rel="noopener">বুক করুন →</a></div></div></div>'}
+function renderTours(list){
+ var g=document.getElementById('tourGrid');
+ g.innerHTML=list.length?list.map(tourCard).join(''):'<div class="nores"><p>এই ফিল্টারে কোনো ট্যুর পাওয়া যায়নি — অন্য গন্তব্য বা বাজেট দিয়ে খুঁজে দেখুন।</p></div>';
+}
+renderTours(tours);
+document.getElementById('searchForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ var d=fD.value,dt=document.getElementById('fDate').value,c=parseInt(document.getElementById('fCost').value,10)||Infinity;
+ renderTours(tours.filter(function(t){return (!d||t.loc===d)&&(!dt||t.iso===dt)&&t.price<=c}));
+});
+document.getElementById('doneGrid').innerHTML=done.map(function(p){
+ return '<div class="dcard"><img src="'+p.img+'" alt="'+p.t+'" loading="lazy"><div class="tick"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></div><div class="ov"><span>'+p.d+'</span><b>'+p.t+'</b></div></div>'}).join('');
+document.getElementById('destGrid').innerHTML=dests.map(function(d){
+ return '<a class="dcard2" href="'+WA+encodeURIComponent(d.n+' নিয়ে জানতে চাই')+'" target="_blank" rel="noopener"><img src="'+d.img+'" alt="'+d.n+'" loading="lazy"><div class="ov"><div><b>'+d.n+'</b><small>বাংলাদেশ</small></div><span class="cnt">'+d.c+'</span></div></a>'}).join('');
+document.getElementById('revGrid').innerHTML=revs.map(function(r){
+ return '<div class="rcard"><span class="q">&rdquo;</span><div class="stars">★★★★★</div><p>'+r.t+'</p><div class="rwho"><b>'+r.n+'</b><span>'+r.r+'</span></div></div>'}).join('');
+// mobile menu
+document.getElementById('burger').addEventListener('click',function(){document.getElementById('mmenu').classList.toggle('open')});
+document.querySelectorAll('#mmenu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mmenu').classList.remove('open')})});
+// back to top + header shadow
+var topBtn=document.getElementById('top');
+window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>500);document.querySelector('header').style.boxShadow=window.scrollY>10?'0 6px 24px rgba(0,0,0,.25)':'none'},{passive:true});
+topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
